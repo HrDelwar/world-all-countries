@@ -1,0 +1,83 @@
+/*custom button packge*/
+
+.btn-custom {
+    background: linear-gradient( -45deg, #1b1e24, #072c33) !important;
+    padding: 8px 26px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 7px;
+    position: relative;
+    border: 0;
+    overflow: hidden;
+}
+
+/*set before shape when button hovered*/
+
+.btn-custom::before {
+    display: inline-flex;
+    z-index: 10;
+    content: "";
+    background: #ff136f;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all .3s;
+}
+
+/*set after shape when button hovered*/
+
+.btn-custom::after {
+    display: inline-flex;
+    z-index: 10;
+    content: "";
+    background: #ff136f;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: -100%;
+    transition: all .3s;
+}
+
+/*set hover effect for button*/
+
+.btn-custom:hover::after {
+    left: -50%;
+}
+
+.btn-custom:hover:before {
+    right: -50%;
+}
+
+.high-z-index {
+    position: relative;
+    z-index: 1030;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+.btn:hover {
+	color: #ffffff;
+}
+
+/*fixed*/
+.fixed-top-custom, .fixed-bottom-custom {
+	position: fixed;
+	right: 20px;
+	padding: 2px 20px;
+	border-radius: 50%;
+	background: #ff136f;
+	color: #0a58ca;
+	font-size: 40px;
+}
+a:hover{
+    color: #fff;
+}
+.fixed-top-custom{
+    top: 20px;
+}
+.fixed-bottom-custom{
+    bottom: 20px;
+}
