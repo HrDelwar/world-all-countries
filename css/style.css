@@ -81,3 +81,7 @@ a:hover{
 .fixed-bottom-custom{
     bottom: 20px;
 }
+
+.card {
+	box-shadow: 2px 10px 20px 2px #6a7075;
+}
